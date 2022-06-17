@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".Fragment.catInfoFragment">
+
+    <TextView
+        android:id="@+id/catInfo_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="cat fact"
+        android:padding="8dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
+
+</FrameLayout>
