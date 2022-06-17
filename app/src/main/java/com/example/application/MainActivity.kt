@@ -17,5 +17,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
             mBinding = ActivityMainBinding.inflate(layoutInflater)
             setContentView(mBinding.root)
             showFragmentForTest(mBinding)
+            setDefaultSelectedBottomNavigation()
         }
     }

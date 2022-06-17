@@ -3,9 +3,17 @@
 
     <item
         android:id="@+id/cat"
-        android:title="Cat" />
+        android:icon="@drawable/ic_menu_cat"
+        android:title="" />
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_menu_home"
+        android:title=""/>
+
     <item
         android:id="@+id/bitcoin"
-        android:title="bitcoin"/>
+        android:icon="@drawable/ic_menu_bitcoin"
+        android:title="" />
 
 </menu>
