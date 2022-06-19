@@ -5,8 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.application.R
 import com.example.application.databinding.FragmentBitcointBinding
+import com.example.application.staticBitcoin
 import com.example.application.viewFragment
 
 
@@ -18,18 +18,16 @@ class bitcointFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
        mBinding = FragmentBitcointBinding.inflate(layoutInflater,container,false)
-        defaultState()
         return mBinding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        mBinding.bitcoinCourseOfBitcoin.setText(staticBitcoin.returnData)
+        mBinding.bitcoinDoubleInfo.setText(staticBitcoin.bitcoinInfoData)
         onClickButtom()
     }
-    fun defaultState(){
-        viewFragment().showCourse(mBinding,"USD")
-        viewFragment().showDopInfoCoin(mBinding,"USD")
-    }
+
     fun onClickButtom(){
         mBinding.bitcoinUSDButtom.setOnClickListener{
             viewFragment().showCourse(mBinding,"USD")
@@ -40,5 +38,4 @@ class bitcointFragment : Fragment() {
             viewFragment().showDopInfoCoin(mBinding,"EUR")
         }
     }
-
 }

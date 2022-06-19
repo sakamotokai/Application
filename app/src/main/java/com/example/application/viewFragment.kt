@@ -2,7 +2,6 @@ package com.example.application
 
 import android.widget.TextView
 import androidx.fragment.app.Fragment
-import com.example.application.Fragment.bitcointFragment
 import com.example.application.databinding.FragmentBitcointBinding
 
 
@@ -14,6 +13,6 @@ class viewFragment:Fragment() {
         getApiData().getDopData_bitcoin(binding.bitcoinDoubleInfo, coin)
     }
     fun showCatInfo(text:TextView){
-        getApiData().getData_cat2(text)
+        getApiData().getData_cat(text)
     }
 }

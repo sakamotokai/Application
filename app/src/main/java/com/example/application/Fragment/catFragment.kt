@@ -7,29 +7,28 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.application.*
-import com.example.application.databinding.DatacontentBinding
 import com.example.application.databinding.FragmentCatBinding
 
 
 class catFragment : Fragment() {
 
-    lateinit var container:DatacontentBinding
     val adapter = catAdapter()
-    lateinit var mBinding:FragmentCatBinding
+    lateinit var mBinding: FragmentCatBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        mBinding = FragmentCatBinding.inflate(layoutInflater,container,false)
+        mBinding = FragmentCatBinding.inflate(layoutInflater, container, false)
         return mBinding.root
     }
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-            init()
+        init()
     }
-    fun init(){
+
+    fun init() {
         mBinding.apply {
             catRecycleView.layoutManager = LinearLayoutManager(context)
             catRecycleView.adapter = adapter
@@ -38,10 +37,6 @@ class catFragment : Fragment() {
                 val item = catItem(catContainerForText.text.toString())
                 adapter.addItem(item)
             }
-        }
-    }
-    fun test(){
-        container.catConteiner.setOnClickListener {
         }
     }
 }
